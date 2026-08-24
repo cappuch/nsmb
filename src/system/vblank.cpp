@@ -16,6 +16,12 @@ namespace System {
 		userVBlankFunction = handler;
 	}
 
+	void setSubBGPosition(u32 bg, s32 x, s32 y) {
+		subBGInfo.x[bg] = x;
+		subBGInfo.y[bg] = y;
+		subBGInfo.dirty[bg] = true;
+	}
+
 	void resetSubBGVBlank();
 	void removeUserVBlankHandler();
 
