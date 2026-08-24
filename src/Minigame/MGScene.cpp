@@ -8,6 +8,7 @@ extern u8 data_020887e0;
 extern "C" void func_02122ba8(u32*);
 extern "C" void func_021229d4();
 extern "C" void func_0200e61c();
+extern "C" void func_0200e944(u32, u32, u32);
 
 #pragma thumb on
 
@@ -22,8 +23,10 @@ bool MGScene::preCreate()
 	return true;
 }
 
-void MGScene::postCreate(u32)
+void MGScene::postCreate(u32 a)
 {
+	func_0200e944(*(u32*)((u8*)this + 0x5c), *(u32*)((u8*)this + 0x60), 0);
+	Object::postCreate(a);
 }
 
 bool MGScene::preDestroy()
