@@ -10,6 +10,14 @@ extern "C" void func_020045cc() {
 
 extern "C" void func_02000738(u32);
 
+extern "C" void func_02004598();
+
+namespace Nitro {
+void Terminate() {
+	func_02004598();
+}
+}
+
 extern "C" void func_02004664(u32 param_1, u32 param_2) {
 	if (Nitro::func_020689fc(0xe, param_1, 0) == 0) {
 		return;
