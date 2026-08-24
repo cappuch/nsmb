@@ -44,6 +44,17 @@ extern "C" bool func_02006300(u32 param_1, s32 param_2) {
 	return 1;
 }
 
+extern "C" void func_02005ea8(u32, u32, u32);
+extern u32 data_020859ec;
+extern u32 data_020859e8;
+
+extern "C" void func_02005e68(void) {
+	u32 a = data_020859ec;
+	u32 b = data_020859e8;
+	func_02005ea8(0x7f007f, a, 0x800);
+	func_02005ea8(0x7f007f, b, 0x800);
+}
+
 extern "C" void DebugScreenWaitForVblank(void) {
 	do {} while ((s32)(*(volatile u16*)0x04000006) >= 0xc0);
 	do {} while ((s32)(*(volatile u16*)0x04000006) < 0xc0);
