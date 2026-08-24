@@ -17,4 +17,14 @@ namespace Layout {
 
 	}
 
+	void getCellPosMain(Vec2_32& pos, u32 cellIdx) {
+
+		s16* out = (s16*)&pos;
+		const BNCL_Cell& cell = bncl[0]->cells[cellIdx];
+
+		out[0] = cell.posX;
+		out[1] = cell.posY;
+
+	}
+
 }
