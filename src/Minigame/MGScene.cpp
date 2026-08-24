@@ -2,7 +2,12 @@
 
 extern u8 data_0208b178;
 extern u32 data_02139700;
+extern u8 data_0203d2ac;
+extern u32 data_0208b658;
+extern u8 data_020887e0;
 extern "C" void func_02122ba8(u32*);
+extern "C" void func_021229d4();
+extern "C" void func_0200e61c();
 
 #pragma thumb on
 
@@ -31,8 +36,19 @@ bool MGScene::preDestroy()
 	}
 	return true;
 }
-void MGScene::postDestroy(u32)
+void MGScene::postDestroy(u32 a)
 {
+	if (a == 2) {
+		data_0203d2ac = 0;
+	}
+	if (*(u16*)((u8*)this + 0xc) == 0x146) {
+		func_02024ad0(&data_0208b658);
+	}
+	if (data_020887e0 != 0) {
+		func_021229d4();
+		func_0200e61c();
+	}
+	Base::postDestroy(a);
 }
 bool MGScene::preUpdate()
 {
