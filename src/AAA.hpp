@@ -124,7 +124,7 @@ namespace Layout {
 
 	void drawCellSubEx(const BNCL_Cell* cell, const BNCL_Cell* refCell, bool sub, const Vec2_32* scale, u16 rot, s32 x, s32 y, u8 palette, u32 oamFlags);
 
-	void initSub(const void* bncd, const void* bncl, const void* bnbl);
+	void initSub(void* bncd, void* bncl, void* bnbl);
 
 	extern u16 subBgColor;
 	extern const BNBL* bnbl[2];
