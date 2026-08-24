@@ -8,6 +8,8 @@ namespace System {
 	ThreadQueue systemThreadQueue;
 	ThreadQueue gameThreadQueue;
 	VBlankBGInfo subBGInfo;
+	u8 data_020859c8[0x10];
+	u8 data_020859d8[0x4];
 #pragma section autobss_3 end
 
 	void setUserVBlankHandler(IrqFunction handler) {
@@ -21,6 +23,17 @@ namespace System {
 		if (userVBlankFunction == (IrqFunction)&subEngineVBlankHandler) {
 			removeUserVBlankHandler();
 		}
+	}
+
+	void subEngineVBlankHandler();
+	void setUserVBlankHandler(IrqFunction handler);
+	void removeUserVBlankHandler();
+
+	void setupSubBGVBlank() {
+		Nitro::func_02066fe8(&subBGInfo, 0, 0x10);
+		Nitro::func_02066fe8(data_020859c8, 0, 0x10);
+		Nitro::func_02066fe8(data_020859d8, 0, 0x4);
+		setUserVBlankHandler(subEngineVBlankHandler);
 	}
 
 	void subEngineVBlankHandler() {
