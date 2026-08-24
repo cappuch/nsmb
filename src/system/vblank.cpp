@@ -14,6 +14,15 @@ namespace System {
 		userVBlankFunction = handler;
 	}
 
+	void resetSubBGVBlank();
+	void removeUserVBlankHandler();
+
+	void resetSubBGVBlank() {
+		if (userVBlankFunction == (IrqFunction)&subEngineVBlankHandler) {
+			removeUserVBlankHandler();
+		}
+	}
+
 	void subEngineVBlankHandler() {
 		uploadSubBGState(subBGInfo);
 	}
