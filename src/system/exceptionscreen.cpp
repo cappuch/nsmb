@@ -21,3 +21,8 @@ extern "C" void func_020063c4(s16* out, s16 a) {
 	Nitro::func_020643d4(buf, 0x81);
 	func_020063f8(out, a, (s8*)buf);
 }
+
+extern "C" void func_02005cdc(void) {
+	do {} while (*(volatile u16*)0x04000006 >= 0xc0);
+	do {} while (*(volatile u16*)0x04000006 < 0xc0);
+}
