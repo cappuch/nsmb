@@ -1,15 +1,20 @@
 #include "../nsmb_nitro.hpp"
 
-extern "C" void func_020063f8(s16* out, s16 a, volatile s8* str);
-extern "C" void func_02006438(s16* out, s16 a, s16 b);
+extern "C" void func_020063f8(s16* out, u16 a, volatile s8* str);
+extern "C" void func_02006438(s16* out, u16 a, s16 b);
+extern "C" void func_020063c4(s16* out, u16 a);
 
-extern "C" void func_020063c4(s16* out, s16 a) {
+extern "C" void func_020063ac(s16* param1, s16* param2, s8* param3) {
+	func_020063f8(param2, *(u16*)(param1 + 1), (volatile s8*)param3);
+}
+
+extern "C" void func_020063c4(s16* out, u16 a) {
 	char buf[0x84];
 	Nitro::func_020643d4(buf, 0x81);
 	func_020063f8(out, a, (s8*)buf);
 }
 
-extern "C" void func_020063f8(s16* out, s16 a, volatile s8* str) {
+extern "C" void func_020063f8(s16* out, u16 a, volatile s8* str) {
 	if (*str == 0) {
 		return;
 	}
@@ -21,7 +26,7 @@ extern "C" void func_020063f8(s16* out, s16 a, volatile s8* str) {
 	} while (*str != 0);
 }
 
-extern "C" void func_02006438(s16* out, s16 a, s16 b) {
+extern "C" void func_02006438(s16* out, u16 a, s16 b) {
 	*out = a + b;
 }
 
