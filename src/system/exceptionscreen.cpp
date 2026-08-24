@@ -26,3 +26,17 @@ extern "C" void func_02005cdc(void) {
 	do {} while (*(volatile u16*)0x04000006 >= 0xc0);
 	do {} while (*(volatile u16*)0x04000006 < 0xc0);
 }
+
+extern "C" bool func_02006300(u32 param_1, s32 param_2) {
+	u32 sum = param_1 + param_2;
+	u32 a = Nitro::func_0206621c();
+	u32 limit = 0x027e0000;
+	if (*(volatile u32*)0x02094510 == 0) {
+		limit = 0x023ff000;
+	}
+	if ((param_1 < 0x2000000 || limit < sum) &&
+		(param_1 < a || a + 0x4000 < sum)) {
+		return 0;
+	}
+	return 1;
+}

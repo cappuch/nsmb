@@ -218,6 +218,7 @@ void func_02060f5c();
 void func_02060f34();
 
 void func_020643d4(void* buf, u32 size);
+u32 func_0206621c();
 
 // FS - FileSystem
 void FS_Init();
