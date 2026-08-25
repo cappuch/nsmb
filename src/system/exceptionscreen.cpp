@@ -30,18 +30,20 @@ extern "C" void func_02006438(s16* out, u16 a, s16 b) {
 	*out = a + b;
 }
 
+extern u32 data_02094510;
+extern u32 data_027e0000;
+
 extern "C" bool func_02006300(u32 param_1, s32 param_2) {
 	u32 sum = param_1 + param_2;
 	u32 a = Nitro::func_0206621c();
-	u32 limit = 0x027e0000;
-	if (*(volatile u32*)0x02094510 == 0) {
-		limit = 0x023ff000;
+	u32 aEnd = a + 0x4000;
+	u32 limit = ((*(volatile u32 *)&data_02094510) != 0) ? ((u32)&data_027e0000) : 0x023ff000;
+
+	if ((param_1 >= 0x2000000 && sum <= limit) ||
+		(a <= param_1 && sum <= aEnd)) {
+		return 1;
 	}
-	if ((param_1 < 0x2000000 || limit < sum) &&
-		(param_1 < a || a + 0x4000 < sum)) {
-		return 0;
-	}
-	return 1;
+	return 0;
 }
 
 extern "C" void func_02005ea8(u32, u32, u32);
