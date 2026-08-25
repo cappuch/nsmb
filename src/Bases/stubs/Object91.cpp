@@ -19,3 +19,7 @@ void Object91::_30() {
 void Object91::_27() {
 
 }
+
+extern "C" void func_ov036_0214302c() {
+
+}
