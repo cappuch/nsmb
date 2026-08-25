@@ -19,3 +19,7 @@ void Object214::pendingDestroy() {
 bool Object214::onHeapCreated() {
 	return 1;
 }
+
+extern "C" int func_ov109_0218b7e0() {
+	return 1;
+}
