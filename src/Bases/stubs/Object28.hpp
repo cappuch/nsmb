@@ -6,6 +6,8 @@ extern "C" void* _ZTV7Vec3_32[];
 // MainProfileTable slot 28  |  ov025  |  profile @ 0x02141800
 class Object28 : public StageEntity {
 public:
+	void pendingDestroy();
+	s32 onDestroy();
 	static void *create();
 	inline Object28();
 	inline ~Object28() {};
