@@ -20,7 +20,7 @@ public:
 	virtual ~Texture();
 
 	//02018bc8
-	bool load(void* texFile); //Loads the texture from the file. returns true if successful, false otherwise.
+	int load(void* texFile); //Loads the texture from the file. returns true if successful, false otherwise.
 
 	//02018b98
 	bool getTextureParams(u32& texParams, u32 texID); //Calls GFX::getTextureParams and returns whether parameter fetching was successful.

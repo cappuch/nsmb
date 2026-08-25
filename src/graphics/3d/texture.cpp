@@ -6,7 +6,7 @@ Texture::Texture() {}
 Texture::~Texture() {}
 
 
-bool Texture::load(void* texFile) {
+int Texture::load(void* texFile) {
 
 	if (!texFile)
 		return false;
