@@ -5,6 +5,8 @@
 // MainProfileTable slot 259  |  ov069  |  profile @ 0x02178438
 class Object259 : public StageEntity {
 public:
+	void _30();
+	void _23();
 	static void *create();
 	inline Object259() {};
 	inline ~Object259() {};
