@@ -9,6 +9,8 @@
 // MainProfileTable slot 110  |  ov068  |  profile @ 0x02179420
 class Object110 : public StageEntity {
 public:
+	void pendingDestroy();
+	s32 onDestroy();
 	ModelAnm _3f4;
 	Model _49c;
 	AnimationCtrl _52c;
