@@ -15,3 +15,7 @@ void Object317::pendingDestroy() {
 s32 Object317::onDestroy() {
 	return 1;
 }
+
+extern "C" void func_ov008_020cd664() {
+
+}
