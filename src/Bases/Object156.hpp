@@ -11,5 +11,7 @@ class Object156 : public StageEntity
 	inline Object156();
 	~Object156();
 	void *create();
+	s32 onDestroy();
+	void pendingDestroy();
 };
 // NTR_SIZE_GUARD(Object156, 0x4dc)
