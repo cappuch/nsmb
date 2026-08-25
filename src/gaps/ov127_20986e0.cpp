@@ -38,3 +38,10 @@ extern "C" int func_ov127_0209fd20() {
 extern "C" void func_ov127_020a0bf0() {
 }
 
+extern "C" void *func_ov127_020a396c(void *p) {
+	return (char *)p + 0x28;
+}
+
+extern "C" void *func_ov127_020a3974(void *p) {
+	return (char *)p + 0x18;
+}

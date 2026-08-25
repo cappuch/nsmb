@@ -62,3 +62,22 @@ extern "C" int func_ov129_020be074(void *p) {
 extern "C" void func_ov129_020c6080() {
 }
 
+extern "C" void *func_ov129_020be064(void *p) {
+	return (char *)p + 0x28;
+}
+
+extern "C" void *func_ov129_020be06c(void *p) {
+	return (char *)p + 0x18;
+}
+
+extern "C" void *func_ov129_020c17dc(void *p) {
+	return (char *)p + 0x40;
+}
+
+extern "C" void *func_ov129_020c1884(void *p) {
+	return (char *)p + 0x30;
+}
+
+extern "C" void *func_ov129_020c188c(void *p) {
+	return (char *)p + 0x20;
+}
