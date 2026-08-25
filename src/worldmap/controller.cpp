@@ -337,3 +337,19 @@ bool WmController::canEntityStopAtNode(WM::NodeLink* link) {
 void* WmController::create() {
 	return new WmController();
 }
+
+extern "C" void func_ov008_020d45c0() {
+
+}
+
+extern "C" void func_ov008_020d4784() {
+
+}
+
+extern "C" void func_ov008_020d81cc() {
+
+}
+
+extern "C" int func_ov008_020d81d0() {
+	return 1;
+}
