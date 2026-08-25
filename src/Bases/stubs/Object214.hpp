@@ -5,6 +5,9 @@
 // MainProfileTable slot 214  |  ov109  |  profile @ 0x0218c638
 class Object214 : public StageEntity {
 public:
+	bool onHeapCreated();
+	void pendingDestroy();
+	bool _01();
 	static void *create();
 	inline Object214() {};
 	inline ~Object214() {};
