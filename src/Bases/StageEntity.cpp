@@ -432,7 +432,7 @@ bool StageEntity::onUpdate_8()
 	func_ov000_020aa990((Vec3_32 *)((u8 *)this + 0x1d0), *(u32 *)((u8 *)this + 0x24c));
 	this->updateSideSensors();
 	if (this->checkSquished()) {
-		this->func_ov000_0209ab90(1, 0, 0x18000, this->direction);
+		this->func_ov000_0209ab90(1, 0, 0x18000, this->linked_player);
 		this->_11();
 		return true;
 	}
