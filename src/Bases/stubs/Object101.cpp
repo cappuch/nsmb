@@ -19,3 +19,7 @@ ActorProfile Object102_Profile = { Object102::create, 102, 230, NULL /* TODO: 0x
 void Object101::pendingDestroy() {
 
 }
+
+extern "C" void func_ov081_0217a8d4() {
+
+}
