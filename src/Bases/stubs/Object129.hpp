@@ -6,6 +6,12 @@ extern "C" void* _ZTV7Vec3_32[];
 // MainProfileTable slot 129  |  ov017  |  profile @ 0x02133bd0
 class Object129 : public StageEntity {
 public:
+	void entityCollision();
+	void _27();
+	void _26();
+	void _25();
+	void _24();
+	void _22();
 	static void *create();
 	inline Object129();
 	inline ~Object129() {};
