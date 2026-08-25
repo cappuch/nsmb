@@ -19,3 +19,7 @@ void Object237::_37() {
 void Object237::_36() {
 
 }
+
+extern "C" void func_ov054_02155058() {
+
+}
