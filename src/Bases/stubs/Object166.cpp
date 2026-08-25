@@ -15,3 +15,7 @@ ActorProfile Object167_Profile = { Object166::create2, 167, 206, NULL /* TODO: 0
 
 // 0x02125f34
 ActorProfile Object166_Profile = { Object166::create, 166, 205, NULL /* TODO: 0x020dc7c4 */ };
+
+extern "C" void func_ov010_020dda54() {
+
+}
