@@ -401,8 +401,8 @@ bool StageEntity::onUpdate_3()
 	} else {
 		this->rotation.x += 0xc00;
 	}
+	this->applyVelocity();
 	this->updateVerticalVelocity();
-	this->func_ov000_0209c85c();
 	this->_11();
 	this->destroyInactive(((u32)(this->_2c6 & 2) << 0xf) >> 0x10);
 	return true;
@@ -422,8 +422,41 @@ bool StageEntity::onUpdate_6()
 bool StageEntity::onUpdate_7()
 {
 }
+extern "C" void func_ov000_020aa990(Vec3_32 *, u32);
+
 bool StageEntity::onUpdate_8()
 {
+	this->updateVerticalVelocity();
+	this->func_ov000_0209c85c();
+	this->updateBottomSensors();
+	func_ov000_020aa990((Vec3_32 *)((u8 *)this + 0x1d0), *(u32 *)((u8 *)this + 0x24c));
+	this->updateSideSensors();
+	if (this->checkSquished()) {
+		this->func_ov000_0209ab90(1, 0, 0x18000, this->direction);
+		this->_11();
+		return true;
+	}
+	if ((*(u32 *)((u8 *)this + 0x24c) & 0x1f40) != 0) {
+		this->updateBounce(0x300, 0x800, 0x800);
+	}
+	if (this->velocity.y == 0) {
+		*(u32 *)((u8 *)this + 0xd0) = 0;
+		*(u32 *)((u8 *)this + 0xd4) = 0;
+		this->_13();
+		this->linked_player = ~0;
+	} else if ((*(u32 *)((u8 *)this + 0x24c) & 0xe000) != 0) {
+		this->velocity.y = -0xd00;
+	}
+	if ((*(u32 *)((u8 *)this + 0x24c) & (0x15 << this->direction)) != 0) {
+		i32 velocity = this->velocity.x;
+		i32 magnitude = velocity < 0 ? -velocity : velocity;
+		magnitude >>= 1;
+		if (magnitude < 0x1000) magnitude = 0x1000;
+		this->velocity.x = velocity < 0 ? -magnitude : magnitude;
+	}
+	this->func_ov000_0209c820(-0x300);
+	this->_11();
+	return true;
 }
 bool StageEntity::onUpdate_9()
 {

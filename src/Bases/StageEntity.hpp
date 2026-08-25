@@ -178,7 +178,6 @@ public:
 	StageEntity();
 	inline ~StageEntity() {};
 
-	void func_ov000_0209c820(u32);
 	s32 onUpdate();
 	bool preUpdate();
 	void postUpdate(u32);
@@ -213,9 +212,10 @@ public:
 	static bool spawnBrokenPipe(i32, i32, u32, u32, u8, u8, i8);
 	static u8 func_ov000_0209aad0(Vec3_32 *, u32, u32);
 	u32 random();
+	void func_ov000_0209c85c();
 	i32 tryAttachToPlayerHands(i32, i32, i32);
 	i32 attachToPlayerHands(i32, i32, i32);
-	void func_ov000_0209c85c();
+	void func_ov000_0209c820(u32);
 	bool destroyInactive(u32 flags);
 	void func_ov000_0209e264(u32, u32, u32);
 	bool func_ov000_0209ccd0(PlayerBase *);
