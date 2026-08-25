@@ -7,3 +7,7 @@ void *Object165::create()
 
 // 0x02125dd8
 ActorProfile Object165_Profile = { Object165::create, 165, 204, NULL /* TODO: 0x020dc7c4 */ };
+
+extern "C" void func_ov010_020dcb28() {
+
+}
