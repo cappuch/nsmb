@@ -6,9 +6,14 @@
 class Object199 : public StageEntity {
 public:
 	static void *create();
-	inline Object199() {};
+	inline Object199();
 	inline ~Object199() {};
+	u8 _pT[0xefc];
 };
+
+inline Object199::Object199() {
+	/* none */
+}
 
 extern ActorProfile Object199_Profile;
 

@@ -6,9 +6,14 @@
 class Object207 : public StageEntity {
 public:
 	static void *create();
-	inline Object207() {};
+	inline Object207();
 	inline ~Object207() {};
+	u8 _pT[0xe88];
 };
+
+inline Object207::Object207() {
+	/* none */
+}
 
 extern ActorProfile Object207_Profile;
 
