@@ -8,6 +8,7 @@ public:
 	static void *create();
 	inline Object265() {};
 	inline ~Object265() {};
+	u8 _pad0[0xc0];
 };
 
 extern ActorProfile Object265_Profile;

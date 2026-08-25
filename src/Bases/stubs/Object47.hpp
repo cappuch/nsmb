@@ -10,6 +10,7 @@ public:
 	static void *create2();
 	inline Object47() {};
 	inline ~Object47() {};
+	u8 _pad0[0x310];
 };
 
 extern ActorProfile Object48_Profile;
