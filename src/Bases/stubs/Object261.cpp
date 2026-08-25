@@ -7,3 +7,11 @@ void *Object261::create()
 
 // 0x0216e044
 ActorProfile Object261_Profile = { Object261::create, 261, 261, NULL /* TODO: 0x0215d148 */ };
+
+bool Object261::_01() {
+	return 0;
+}
+
+void Object261::pendingDestroy() {
+
+}
