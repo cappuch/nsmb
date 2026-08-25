@@ -31,3 +31,23 @@ bool Object345::onUpdate_8() {
 bool Object345::_14() {
 
 }
+
+extern "C" int func_ov128_020b9ebc() {
+	return 1;
+}
+
+extern "C" int func_ov128_020b9f30() {
+	return 1;
+}
+
+extern "C" void func_ov128_020bb314() {
+
+}
+
+extern "C" int func_ov128_020bb650() {
+	return 2;
+}
+
+extern "C" int func_ov128_020bbe90() {
+	return 1;
+}
