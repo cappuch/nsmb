@@ -15,3 +15,7 @@ void Object336::pendingDestroy() {
 s32 Object336::onDestroy() {
 	return 1;
 }
+
+extern "C" void func_ov130_02130ef4() {
+
+}
