@@ -7,6 +7,7 @@ extern "C" void func_0201be64(void *);
 // MainProfileTable slot 227  |  ov087  |  profile @ 0x0217f600
 class Object227 : public StageEntity {
 public:
+	void pendingDestroy();
 	static void *create();
 	inline Object227();
 	inline ~Object227() {};
