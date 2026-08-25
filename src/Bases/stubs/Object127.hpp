@@ -7,6 +7,8 @@
 // MainProfileTable slot 127  |  ov071  |  profile @ 0x02179880
 class Object127 : public StageEntity {
 public:
+	void pendingDestroy();
+	s32 onDestroy();
 	ModelAnm _3f4;
 	Animation _49c;
 	u8 _pad0[0x1c];
