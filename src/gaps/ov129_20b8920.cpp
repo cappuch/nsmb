@@ -143,7 +143,7 @@ extern "C" void func_ov129_020bbbc0()
 // flag set via indexed field
 extern "C" void func_ov129_020bcbf4(void *p)
 {
-	unsigned char t = *(unsigned char *)((char *)p + 0x44);
+	int t = *(int *)((char *)p + 0x44);
 	*(unsigned char *)((char *)p + t + 0x2a) = 1;
 }
 
