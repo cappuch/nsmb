@@ -6,6 +6,8 @@
 // MainProfileTable slot 307  |  ov009  |  profile @ 0x020dacdc
 class Object307 : public Actor {
 public:
+	s32 onDestroy();
+	void pendingDestroy();
 	Model model;
 	u8 _pad[0x18];
 	static void *create();
