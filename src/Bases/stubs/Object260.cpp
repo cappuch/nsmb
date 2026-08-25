@@ -15,3 +15,7 @@ void Object260::damagePlayer(ActiveCollider *, PlayerBase *) {
 void Object260::pendingDestroy() {
 
 }
+
+extern "C" int _ZN9Object26015playerCollisionEP14ActiveColliderS1_() {
+	return 1;
+}
