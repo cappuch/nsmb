@@ -6,3 +6,7 @@
 src/Bases/stubs/Object207.cpp:
     .text       start:0x0217dc68 end:0x0217e200
     .data       start:0x0217e334 end:0x0217e460
+
+src/gaps/ov091_217db60.cpp:
+    .text       start:0x217db60 end:0x217dc68
+

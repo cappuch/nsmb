@@ -11,3 +11,7 @@ src/Bases/stubs/Object98.cpp:
 src/Bases/FireSnake.cpp:
     .text       start:0x0213deac end:0x0213eadc
     .data       start:0x0213ed38 end:0x0213ee80
+
+src/gaps/ov023_213dcbc.cpp:
+    .text       start:0x213dcbc end:0x213deac
+

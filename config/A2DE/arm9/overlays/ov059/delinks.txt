@@ -14,3 +14,7 @@ src/Bases/stubs/Object203.cpp:
 src/Bases/stubs/Object205.cpp:
     .text       start:0x02174160 end:0x021746d8
     .data       start:0x02174990 end:0x02174ac0
+
+src/gaps/ov059_21726c0.cpp:
+    .text       start:0x21726c0 end:0x2172dd4
+

@@ -113,3 +113,85 @@ src/Bases/stubs/Object371.cpp:
 src/Bases/stubs/Object376.cpp:
     .text       start:0x02114db0 end:0x02114ebc
     .data       start:0x0211ba78 end:0x0211ba94
+
+src/gaps/ov129_20b8920.cpp:
+    .text       start:0x20b8920 end:0x20c952c
+
+src/gaps/ov129_20c970c.cpp:
+    .text       start:0x20c970c end:0x20ccc6c
+
+src/gaps/ov129_20ccd58.cpp:
+    .text       start:0x20ccd58 end:0x20d0ae8
+
+src/gaps/ov129_20d0b14.cpp:
+    .text       start:0x20d0b14 end:0x20d2fe8
+
+src/gaps/ov129_20d3018.cpp:
+    .text       start:0x20d3018 end:0x20d51d8
+
+src/gaps/ov129_20d5208.cpp:
+    .text       start:0x20d5208 end:0x20d9000
+
+src/gaps/ov129_20d9124.cpp:
+    .text       start:0x20d9124 end:0x20dbb30
+
+src/gaps/ov129_20dbc48.cpp:
+    .text       start:0x20dbc48 end:0x20deec4
+
+src/gaps/ov129_20def04.cpp:
+    .text       start:0x20def04 end:0x20e093c
+
+src/gaps/ov129_20e0a18.cpp:
+    .text       start:0x20e0a18 end:0x20e4064
+
+src/gaps/ov129_20e4128.cpp:
+    .text       start:0x20e4128 end:0x20e5550
+
+src/gaps/ov129_20e55e0.cpp:
+    .text       start:0x20e55e0 end:0x20e701c
+
+src/gaps/ov129_20e717c.cpp:
+    .text       start:0x20e717c end:0x20eac90
+
+src/gaps/ov129_20ead20.cpp:
+    .text       start:0x20ead20 end:0x20ec1c4
+
+src/gaps/ov129_20ec240.cpp:
+    .text       start:0x20ec240 end:0x20ee638
+
+src/gaps/ov129_20ee6cc.cpp:
+    .text       start:0x20ee6cc end:0x20f09f4
+
+src/gaps/ov129_20f0ab8.cpp:
+    .text       start:0x20f0ab8 end:0x20f53a4
+
+src/gaps/ov129_20f53e4.cpp:
+    .text       start:0x20f53e4 end:0x20f97ec
+
+src/gaps/ov129_20f9824.cpp:
+    .text       start:0x20f9824 end:0x20fc6d8
+
+src/gaps/ov129_20fc778.cpp:
+    .text       start:0x20fc778 end:0x2100318
+
+src/gaps/ov129_2100490.cpp:
+    .text       start:0x2100490 end:0x2102ec4
+
+src/gaps/ov129_2102f54.cpp:
+    .text       start:0x2102f54 end:0x2108780
+
+src/gaps/ov129_21087ac.cpp:
+    .text       start:0x21087ac end:0x210d474
+
+src/gaps/ov129_210d594.cpp:
+    .text       start:0x210d594 end:0x2110304
+
+src/gaps/ov129_21103d8.cpp:
+    .text       start:0x21103d8 end:0x2113768
+
+src/gaps/ov129_21137ac.cpp:
+    .text       start:0x21137ac end:0x2114db0
+
+src/gaps/ov129_2114ebc.cpp:
+    .text       start:0x2114ebc end:0x2114f28
+

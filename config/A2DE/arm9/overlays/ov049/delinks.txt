@@ -7,3 +7,7 @@
 src/Bases/stubs/Object192.cpp:
     .text       start:0x021471dc end:0x02147f5c
     .data       start:0x02147ff0 end:0x02148120
+
+src/gaps/ov049_2146c60.cpp:
+    .text       start:0x2146c60 end:0x21471dc
+

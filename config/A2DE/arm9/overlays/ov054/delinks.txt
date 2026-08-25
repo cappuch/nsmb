@@ -108,3 +108,28 @@ src/Bases/stubs/Object20.cpp:
 src/Bases/stubs/Object242.cpp:
     .text       start:0x02169a28 end:0x0216bbf0
     .data       start:0x02171020 end:0x0217118c
+
+src/gaps/ov054_2159404.cpp:
+    .text       start:0x2159404 end:0x2159664
+
+src/gaps/ov054_215e3a4.cpp:
+    .text       start:0x215e3a4 end:0x215f208
+
+src/gaps/ov054_215fed0.cpp:
+    .text       start:0x215fed0 end:0x2161fa4
+
+src/gaps/ov054_21645f8.cpp:
+    .text       start:0x21645f8 end:0x2165ebc
+
+src/gaps/ov054_2165f6c.cpp:
+    .text       start:0x2165f6c end:0x21668ec
+
+src/gaps/ov054_2166b2c.cpp:
+    .text       start:0x2166b2c end:0x216705c
+
+src/gaps/ov054_2169518.cpp:
+    .text       start:0x2169518 end:0x2169a28
+
+src/gaps/ov054_216bbf0.cpp:
+    .text       start:0x216bbf0 end:0x216bfb0
+

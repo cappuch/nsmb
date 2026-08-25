@@ -14,3 +14,10 @@ src/Bases/stubs/Object183.cpp:
 src/Bases/stubs/Object208.cpp:
     .text       start:0x02186d08 end:0x02187ec4
     .data       start:0x02188208 end:0x02188340
+
+src/gaps/ov096_2185b78.cpp:
+    .text       start:0x2185b78 end:0x2185b88
+
+src/gaps/ov096_2186ce4.cpp:
+    .text       start:0x2186ce4 end:0x2186d08
+

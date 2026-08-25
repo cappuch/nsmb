@@ -20,3 +20,7 @@ src/Bases/stubs/Object177.cpp:
 src/Bases/stubs/Object178.cpp:
     .text       start:0x021329b0 end:0x02132ea8
     .data       start:0x02133414 end:0x02133540
+
+src/gaps/ov020_2132718.cpp:
+    .text       start:0x2132718 end:0x2132744
+

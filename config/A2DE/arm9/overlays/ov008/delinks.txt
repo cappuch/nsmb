@@ -68,3 +68,22 @@ src/Bases/stubs/Object324.cpp:
 src/Bases/stubs/Object314.cpp:
     .text       start:0x020e0410 end:0x020e23fc
     .data       start:0x020ee2c8 end:0x020ee32c
+
+src/gaps/ov008_20cc2e0.cpp:
+    .text       start:0x20cc2e0 end:0x20cc604
+
+src/gaps/ov008_20ccc04.cpp:
+    .text       start:0x20ccc04 end:0x20cd2c0
+
+src/gaps/ov008_20cd340.cpp:
+    .text       start:0x20cd340 end:0x20cd3f8
+
+src/gaps/ov008_20ddd74.cpp:
+    .text       start:0x20ddd74 end:0x20de0d8
+
+src/gaps/ov008_20de72c.cpp:
+    .text       start:0x20de72c end:0x20e0410
+
+src/gaps/ov008_20e23fc.cpp:
+    .text       start:0x20e23fc end:0x20e2d34
+

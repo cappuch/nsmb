@@ -32,3 +32,13 @@ src/Bases/stubs/Object35.cpp:
 src/Bases/stubs/Object40.cpp:
     .text       start:0x0214e308 end:0x021517ec
     .data       start:0x021526c0 end:0x02152800
+
+src/gaps/ov042_2147514.cpp:
+    .text       start:0x2147514 end:0x21491f8
+
+src/gaps/ov042_2149254.cpp:
+    .text       start:0x2149254 end:0x214929c
+
+src/gaps/ov042_214a9b4.cpp:
+    .text       start:0x214a9b4 end:0x214ab14
+

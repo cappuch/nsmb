@@ -77,3 +77,58 @@ src/Bases/stubs/Object357.cpp:
 src/Bases/stubs/Object355.cpp:
     .text       start:0x020fb27c end:0x020fb2a8
     .data       start:0x02100c00 end:0x02100c14
+
+src/gaps/ov128_20b8920.cpp:
+    .text       start:0x20b8920 end:0x20b95b8
+
+src/gaps/ov128_20c8318.cpp:
+    .text       start:0x20c8318 end:0x20cbb38
+
+src/gaps/ov128_20cbb68.cpp:
+    .text       start:0x20cbb68 end:0x20ce1b4
+
+src/gaps/ov128_20ce280.cpp:
+    .text       start:0x20ce280 end:0x20d0e7c
+
+src/gaps/ov128_20d0eac.cpp:
+    .text       start:0x20d0eac end:0x20d49b4
+
+src/gaps/ov128_20d4a18.cpp:
+    .text       start:0x20d4a18 end:0x20d58fc
+
+src/gaps/ov128_20d59f8.cpp:
+    .text       start:0x20d59f8 end:0x20d937c
+
+src/gaps/ov128_20d93ac.cpp:
+    .text       start:0x20d93ac end:0x20db350
+
+src/gaps/ov128_20db3bc.cpp:
+    .text       start:0x20db3bc end:0x20dcaf4
+
+src/gaps/ov128_20dcb94.cpp:
+    .text       start:0x20dcb94 end:0x20e1544
+
+src/gaps/ov128_20e1574.cpp:
+    .text       start:0x20e1574 end:0x20e6064
+
+src/gaps/ov128_20e6094.cpp:
+    .text       start:0x20e6094 end:0x20e9090
+
+src/gaps/ov128_20e90c0.cpp:
+    .text       start:0x20e90c0 end:0x20ec91c
+
+src/gaps/ov128_20ec94c.cpp:
+    .text       start:0x20ec94c end:0x20ee494
+
+src/gaps/ov128_20ee598.cpp:
+    .text       start:0x20ee598 end:0x20f31ac
+
+src/gaps/ov128_20f31d8.cpp:
+    .text       start:0x20f31d8 end:0x20f5434
+
+src/gaps/ov128_20f553c.cpp:
+    .text       start:0x20f553c end:0x20f7860
+
+src/gaps/ov128_20f7940.cpp:
+    .text       start:0x20f7940 end:0x20fb27c
+

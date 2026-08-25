@@ -7,3 +7,7 @@
 src/Bases/stubs/Object75.cpp:
     .text       start:0x021799c0 end:0x0217c088
     .data       start:0x0217c1c0 end:0x0217c2fc
+
+src/gaps/ov079_217c088.cpp:
+    .text       start:0x217c088 end:0x217c0d0
+

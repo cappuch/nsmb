@@ -10,3 +10,10 @@ src/Scenes/BootScene.cpp:
 src/Bases/stubs/Object326.cpp:
     .text       start:0x020ccffc end:0x020cd030
     .data       start:0x020ceb24 end:0x020ceb34
+
+src/gaps/ov001_20cceb4.cpp:
+    .text       start:0x20cceb4 end:0x20ccffc
+
+src/gaps/ov001_20cd030.cpp:
+    .text       start:0x20cd030 end:0x20cd0d4
+

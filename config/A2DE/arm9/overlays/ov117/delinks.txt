@@ -12,3 +12,7 @@ src/Bases/stubs/Object125.cpp:
 src/Bases/stubs/Object213.cpp:
     .text       start:0x0218cb48 end:0x0218de90
     .data       start:0x0218e0b0 end:0x0218e0d0
+
+src/gaps/ov117_218ca28.cpp:
+    .text       start:0x218ca28 end:0x218cb48
+

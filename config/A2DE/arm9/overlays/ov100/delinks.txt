@@ -24,3 +24,13 @@ src/Bases/stubs/Object164.cpp:
 src/Bases/stubs/Object47.cpp:
     .text       start:0x02187b30 end:0x02188d04
     .data       start:0x02189780 end:0x02189870
+
+src/gaps/ov100_2186e38.cpp:
+    .text       start:0x2186e38 end:0x2187084
+
+src/gaps/ov100_2187160.cpp:
+    .text       start:0x2187160 end:0x21873a0
+
+src/gaps/ov100_2188d04.cpp:
+    .text       start:0x2188d04 end:0x2188e4c
+

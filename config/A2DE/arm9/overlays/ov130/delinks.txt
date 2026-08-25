@@ -54,3 +54,16 @@ src/Minigame/MGScene_338.cpp:
     .text       start:0x02134e90 end:0x02135230
     .rodata     start:0x02137cc0 end:0x02137d2c
     .data       start:0x02139000 end:0x02139194
+
+src/gaps/ov130_21226e0.cpp:
+    .text       start:0x21226e0 end:0x2126a38
+
+src/gaps/ov130_2126c7c.cpp:
+    .text       start:0x2126c7c end:0x2127324
+
+src/gaps/ov130_213200c.cpp:
+    .text       start:0x213200c end:0x2132020
+
+src/gaps/ov130_2135230.cpp:
+    .text       start:0x2135230 end:0x2137bf0
+

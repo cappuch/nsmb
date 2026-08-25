@@ -12,3 +12,7 @@ src/Bases/stubs/Object68.cpp:
 src/Bases/stubs/Object70.cpp:
     .text       start:0x02173e1c end:0x02175294
     .data       start:0x02175818 end:0x02175940
+
+src/gaps/ov056_2173c9c.cpp:
+    .text       start:0x2173c9c end:0x2173e1c
+

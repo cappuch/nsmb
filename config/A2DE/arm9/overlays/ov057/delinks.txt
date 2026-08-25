@@ -11,3 +11,13 @@ src/Bases/stubs/Object44.cpp:
 src/Bases/stubs/Object45.cpp:
     .text       start:0x02173a98 end:0x021754ac
     .data       start:0x02175750 end:0x02175818
+
+src/gaps/ov057_21726c0.cpp:
+    .text       start:0x21726c0 end:0x21727f8
+
+src/gaps/ov057_21730d8.cpp:
+    .text       start:0x21730d8 end:0x2173a98
+
+src/gaps/ov057_21754ac.cpp:
+    .text       start:0x21754ac end:0x21754cc
+

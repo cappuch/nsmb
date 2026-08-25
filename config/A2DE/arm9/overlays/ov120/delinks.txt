@@ -24,3 +24,10 @@ src/Bases/stubs/Object217.cpp:
 src/Bases/stubs/Object216.cpp:
     .text       start:0x0218dad8 end:0x0218db2c
     .data       start:0x0218dec8 end:0x0218ded4
+
+src/gaps/ov120_218c7c0.cpp:
+    .text       start:0x218c7c0 end:0x218d88c
+
+src/gaps/ov120_218db2c.cpp:
+    .text       start:0x218db2c end:0x218db50
+

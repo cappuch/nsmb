@@ -28,3 +28,10 @@ src/Bases/stubs/Object143.cpp:
 src/Bases/stubs/Object146.cpp:
     .text       start:0x02140d3c end:0x021413d4
     .data       start:0x02141ce4 end:0x02141e20
+
+src/gaps/ov025_213ee30.cpp:
+    .text       start:0x213ee30 end:0x213eea8
+
+src/gaps/ov025_213f074.cpp:
+    .text       start:0x213f074 end:0x2140ad8
+

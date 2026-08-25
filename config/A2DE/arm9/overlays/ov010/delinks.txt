@@ -133,3 +133,61 @@ src/Bases/stubs/Player.cpp:
 src/Bases/stubs/Object267.cpp:
     .text       start:0x021213e0 end:0x02121408
     .data       start:0x021291bc end:0x021291c8
+
+src/gaps/ov010_20cc2e0.cpp:
+    .text       start:0x20cc2e0 end:0x20cdd1c
+
+src/gaps/ov010_20ce540.cpp:
+    .text       start:0x20ce540 end:0x20ce794
+
+src/gaps/ov010_20ce83c.cpp:
+    .text       start:0x20ce83c end:0x20cf544
+
+src/gaps/ov010_20d0be4.cpp:
+    .text       start:0x20d0be4 end:0x20d0d80
+
+src/gaps/ov010_20d5120.cpp:
+    .text       start:0x20d5120 end:0x20d5240
+
+src/gaps/ov010_20d67cc.cpp:
+    .text       start:0x20d67cc end:0x20d7954
+
+src/gaps/ov010_20d9ebc.cpp:
+    .text       start:0x20d9ebc end:0x20daa04
+
+src/gaps/ov010_20dab54.cpp:
+    .text       start:0x20dab54 end:0x20db4a8
+
+src/gaps/ov010_20dbcfc.cpp:
+    .text       start:0x20dbcfc end:0x20dc560
+
+src/gaps/ov010_20dc660.cpp:
+    .text       start:0x20dc660 end:0x20dc7b4
+
+src/gaps/ov010_20e0698.cpp:
+    .text       start:0x20e0698 end:0x20e0ab4
+
+src/gaps/ov010_20e27d4.cpp:
+    .text       start:0x20e27d4 end:0x20e9258
+
+src/gaps/ov010_20e94cc.cpp:
+    .text       start:0x20e94cc end:0x20e9598
+
+src/gaps/ov010_20e9f24.cpp:
+    .text       start:0x20e9f24 end:0x20f4a00
+
+src/gaps/ov010_20f5d4c.cpp:
+    .text       start:0x20f5d4c end:0x20f7d50
+
+src/gaps/ov010_20f8e78.cpp:
+    .text       start:0x20f8e78 end:0x20fb57c
+
+src/gaps/ov010_20fc988.cpp:
+    .text       start:0x20fc988 end:0x2108fe4
+
+src/gaps/ov010_2109180.cpp:
+    .text       start:0x2109180 end:0x2120e14
+
+src/gaps/ov010_2120e40.cpp:
+    .text       start:0x2120e40 end:0x21213e0
+

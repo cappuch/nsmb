@@ -1,3 +1,7 @@
     .text       start:0x0215cc60 end:0x0215ccc8 kind:code align:32
     .ctor       start:0x0215ccc8 end:0x0215ccc8 kind:rodata align:4
     .bss        start:0x0215cce0 end:0x021874e0 kind:bss align:32
+
+src/gaps/ov053_215cc60.cpp:
+    .text       start:0x215cc60 end:0x215ccc8
+
