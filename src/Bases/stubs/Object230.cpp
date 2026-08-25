@@ -15,3 +15,11 @@ void Object230::pendingDestroy() {
 s32 Object230::onDestroy() {
 	return 1;
 }
+
+extern "C" void func_ov088_0217df78() {
+
+}
+
+extern "C" void func_ov088_0217e0bc() {
+
+}
