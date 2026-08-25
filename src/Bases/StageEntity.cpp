@@ -215,7 +215,7 @@ void StageEntity::func_ov000_0209da00()
 	StageEntity::func_ov000_0209da0c();
 }
 
-u32 uRam020cad40;
+extern u32 data_ov000_020cad40;
 void func_ov000_020af30c(u32, u32, u32, u32, u32);
 void StageEntity::func_ov000_0209e5a8(u32 param_1, u32 param_2)
 {
@@ -225,7 +225,7 @@ void StageEntity::func_ov000_0209e5a8(u32 param_1, u32 param_2)
 	if (param_2 == ~0) {
 		param_2 = 3;
 	}
-	func_ov000_020af30c(uRam020cad40, (uVar1 << 4) >> 0x10, (u32)(((i32)param_1 >> 0xc) * -0x10000) >> 0x10, 0, 0);
+	func_ov000_020af30c(data_ov000_020cad40, (uVar1 << 4) >> 0x10, (u32)(((i32)param_1 >> 0xc) * -0x10000) >> 0x10, 0, 0);
 
 	Vec3_32 vec;
 
