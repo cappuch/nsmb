@@ -5,6 +5,11 @@
 // MainProfileTable slot 239  |  ov014  |  profile @ 0x021330e8
 class Object239 : public StageEntity {
 public:
+	void onStomped();
+	void _27();
+	void _22();
+	void _25();
+	void _30();
 	static void *create();
 	inline Object239() {};
 	inline ~Object239() {};
