@@ -7,3 +7,11 @@ void *Object104::create()
 
 // 0x0218e1f0
 ActorProfile Object104_Profile = { Object104::create, 104, 225, NULL };
+
+s32 Object104::onDestroy() {
+	return 1;
+}
+
+void Object104::pendingDestroy() {
+
+}
