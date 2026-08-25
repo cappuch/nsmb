@@ -19,3 +19,7 @@ void Object114::pendingDestroy() {
 void Object114::_23() {
 
 }
+
+extern "C" void func_ov040_021421b0() {
+
+}
