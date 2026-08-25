@@ -7,3 +7,7 @@ void *Object264::create()
 
 // 0x0218f550
 ActorProfile Object264_Profile = { Object264::create, 264, 185, NULL };
+
+extern "C" void func_ov123_0218d918() {
+
+}
