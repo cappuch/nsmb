@@ -7,3 +7,15 @@ void *Object114::create()
 
 // 0x02146720
 ActorProfile Object114_Profile = { Object114::create, 114, 132, NULL /* TODO: 0x02143b04 */ };
+
+s32 Object114::onDestroy() {
+	return 1;
+}
+
+void Object114::pendingDestroy() {
+
+}
+
+void Object114::_23() {
+
+}
