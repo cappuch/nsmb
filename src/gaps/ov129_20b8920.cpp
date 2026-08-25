@@ -1,3 +1,11 @@
+extern "C" unsigned int data_ov129_021188e4[];
+extern "C" unsigned int data_ov129_021189d4[];
+extern "C" unsigned int data_ov129_021189cc[];
+extern "C" unsigned int data_ov129_021189c4[];
+extern "C" void *_ZTV7Vec2_32[];
+extern "C" int func_ov129_020b9678();
+extern "C" bool func_ov129_020bf920(void *p);
+extern "C" void func_02043464(void *, int, int);
 // gap chunk
 
 extern "C" void func_ov129_020b8920() {
@@ -215,4 +223,76 @@ extern "C" void func_ov129_020bbbd4(void *p)
 {
 	data_ov129_021219ac = 0;
 	*(int *)((char *)p + 0x10c) = 0;
+}
+
+extern "C" void func_ov129_020c13b4(void *p)
+{
+	unsigned int a = data_ov129_021188e4[0];
+	unsigned int b = data_ov129_021188e4[1];
+	*(unsigned int *)p = a;
+	*(unsigned int *)((char *)p + 4) = b;
+}
+
+extern "C" void func_ov129_020c42ac(void *p)
+{
+	unsigned int a = data_ov129_021189d4[0];
+	unsigned int b = data_ov129_021189d4[1];
+	*(unsigned int *)p = a;
+	*(unsigned int *)((char *)p + 4) = b;
+}
+
+extern "C" void func_ov129_020c4520(void *p)
+{
+	unsigned int a = data_ov129_021189cc[0];
+	unsigned int b = data_ov129_021189cc[1];
+	*(unsigned int *)p = a;
+	*(unsigned int *)((char *)p + 4) = b;
+}
+
+extern "C" void func_ov129_020c4764(void *p)
+{
+	unsigned int a = data_ov129_021189c4[0];
+	unsigned int b = data_ov129_021189c4[1];
+	*(unsigned int *)p = a;
+	*(unsigned int *)((char *)p + 4) = b;
+}
+
+extern "C" void func_ov129_020c0210(void *p, unsigned char v)
+{
+	for (int i = 0; i < 4; i++) {
+		*(unsigned char *)p = v;
+		p = (char *)p + 0x18;
+	}
+}
+
+extern "C" int func_ov129_020b9cc0()
+{
+	return func_ov129_020b9678() != false;
+}
+
+extern "C" void func_ov129_020bba38(void *p)
+{
+	func_ov129_020bf920(p);
+	func_02043464((char *)p + 0x10c, 0, 1);
+}
+
+extern "C" void func_ov129_020bbfb0(void *d, void *s)
+{
+	*(void **)d = (void *)&_ZTV7Vec2_32[2];
+	*(int *)((char *)d + 4) = *(int *)((char *)s + 0x2c);
+	*(int *)((char *)d + 8) = *(int *)((char *)s + 0x30);
+}
+
+extern "C" void func_ov129_020bbfd0(void *d, void *s)
+{
+	*(void **)d = (void *)&_ZTV7Vec2_32[2];
+	*(int *)((char *)d + 4) = *(int *)((char *)s + 0x14);
+	*(int *)((char *)d + 8) = *(int *)((char *)s + 0x18);
+}
+
+extern "C" void func_ov129_020bc020(void *d, void *s)
+{
+	*(void **)d = (void *)&_ZTV7Vec2_32[2];
+	*(int *)((char *)d + 4) = *(int *)((char *)s + 0x20);
+	*(int *)((char *)d + 8) = *(int *)((char *)s + 0x24);
 }
