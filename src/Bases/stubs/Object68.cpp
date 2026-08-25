@@ -23,3 +23,7 @@ ActorProfile Object88_Profile = { Object88::create, 88, 111, NULL /* TODO: 0x021
 
 // 0x02175490
 ActorProfile Object89_Profile = { Object89::create, 89, 112, NULL /* TODO: 0x02173ad8 */ };
+
+extern "C" void func_ov056_02173a00() {
+
+}
