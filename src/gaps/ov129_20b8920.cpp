@@ -178,7 +178,41 @@ extern "C" void func_ov129_020c1324(void *p, int i, int v)
 
 
 // field byte test == 1
+
+// ov129 batch 3
+
+extern "C" void func_ov129_020bfe7c(void *p);
+extern "C" void func_ov129_020bfe38(void *p);
+
+extern "C" void func_ov129_020c0afc(void *p)
+{
+	func_ov129_020bfe7c(p);
+	func_ov129_020bfe38(p);
+}
+
+extern "C" unsigned int data_ov129_02118780[];
+
+extern "C" void func_ov129_020bed5c(void *p)
+{
+	*(int *)((char *)p + 0x4c) = data_ov129_02118780[0];
+	*(int *)((char *)p + 0x50) = data_ov129_02118780[1];
+}
+
+extern "C" unsigned int data_ov129_021187e8[];
+
+extern "C" void func_ov129_020bf300(void *p)
+{
+	*(int *)((char *)p + 0x4c) = data_ov129_021187e8[0];
+	*(int *)((char *)p + 0x50) = data_ov129_021187e8[1];
+}
+
 extern "C" int func_ov129_020c6068(void *p)
 {
-	return (*(unsigned char *)((char *)p + 8) & 0xff) == 1;
+	return (*(int *)((char *)p + 8) & 0xff) == 1;
+}
+
+extern "C" void func_ov129_020bbbd4(void *p)
+{
+	data_ov129_021219ac = 0;
+	*(int *)((char *)p + 0x10c) = 0;
 }
