@@ -170,7 +170,7 @@ extern "C" void func_ov129_020bf9d0(void *a, void *b)
 }
 
 // two-index byte store + flag
-extern "C" void func_ov129_020c1324(void *p, int i, int v)
+extern "C" void func_ov129_020c1324(void *p, int v, int i)
 {
 	*(unsigned char *)((char *)p + (i << 5) + 0x1f) = v;
 	*(unsigned char *)((char *)p + 0x91) = 1;
