@@ -6,6 +6,8 @@
 // ov100  |  vtable @ 0x02189798
 class Object47 : public StageEntity {
 public:
+	void pendingDestroy();
+	s32 onDestroy();
 	static void *create();
 	static void *create2();
 	inline Object47() {};
