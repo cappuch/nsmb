@@ -8,6 +8,7 @@ public:
 	static void *create();
 	inline Object118() {};
 	inline ~Object118() {};
+	u8 _pad0[0xe8];
 };
 
 extern ActorProfile Object118_Profile;

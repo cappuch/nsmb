@@ -18,6 +18,7 @@ public:
 	static void *create();
 	inline Object76() {};
 	inline ~Object76() {};
+	u8 _pad0[0xa34];
 };
 
 extern ActorProfile Object76_Profile;

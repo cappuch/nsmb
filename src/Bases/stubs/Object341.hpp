@@ -8,6 +8,7 @@ public:
 	static void *create();
 	inline Object341() {};
 	inline ~Object341() {};
+	u8 _pad0[0x2f24];
 };
 
 extern ObjectProfile Object341_Profile;

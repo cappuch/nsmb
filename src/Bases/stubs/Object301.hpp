@@ -8,6 +8,7 @@ public:
 	static void *create();
 	inline Object301() {};
 	inline ~Object301() {};
+	u8 _pad0[0xc8];
 };
 
 extern ActorProfile Object301_Profile;
