@@ -7,3 +7,7 @@ void *Object172::create()
 
 // 0x0218ad60
 ActorProfile Object172_Profile = { Object172::create, 172, 211, NULL /* TODO: 0x0218ac38 */ };
+
+extern "C" void func_ov106_0218aad4() {
+
+}
