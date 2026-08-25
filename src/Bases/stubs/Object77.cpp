@@ -15,3 +15,7 @@ s32 Object77::onDestroy() {
 void Object77::pendingDestroy() {
 
 }
+
+extern "C" int func_ov012_02130dc0() {
+	return 0;
+}
