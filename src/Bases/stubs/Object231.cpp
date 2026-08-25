@@ -15,3 +15,19 @@ void Object231::pendingDestroy() {
 s32 Object231::onDestroy() {
 	return 1;
 }
+
+extern "C" void func_ov097_021859b8() {
+
+}
+
+extern "C" void func_ov097_02185a08() {
+
+}
+
+extern "C" void func_ov097_02185b24() {
+
+}
+
+extern "C" void func_ov097_02185b74() {
+
+}
