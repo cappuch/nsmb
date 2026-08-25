@@ -5,6 +5,8 @@
 // MainProfileTable slot 263  |  ov118  |  profile @ 0x0218fc30
 class Object263 : public StageEntity {
 public:
+	void pendingDestroy();
+	s32 onDestroy();
 	u8 _pad0[0xc];
 
 	static void *create();

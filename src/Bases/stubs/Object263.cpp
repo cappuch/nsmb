@@ -7,3 +7,11 @@ void *Object263::create()
 
 // 0x0218fc30
 ActorProfile Object263_Profile = { Object263::create, 263, 262, NULL /* TODO: 0x0218c88c */ };
+
+s32 Object263::onDestroy() {
+	return 1;
+}
+
+void Object263::pendingDestroy() {
+
+}
