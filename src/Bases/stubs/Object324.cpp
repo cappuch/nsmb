@@ -7,3 +7,7 @@ void *Object324::create()
 
 // 0x020e9bf0
 ActorProfile Object324_Profile = { Object324::create, 324, 4, NULL };
+
+extern "C" void func_ov008_020de404() {
+
+}
