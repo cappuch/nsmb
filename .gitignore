@@ -15,4 +15,5 @@ extracted/*
 build/*
 
 # Keep .gitkeep files
-!/**/.gitkeep
+!/**/.gitkeep.freebuff/
+report.json
