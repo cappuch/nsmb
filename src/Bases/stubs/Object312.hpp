@@ -6,6 +6,8 @@
 // MainProfileTable slot 312  |  ov009  |  profile @ 0x020db0b0
 class Object312 : public Actor {
 public:
+	s32 onDestroy();
+	void pendingDestroy();
 	ModelAnm model;
 	u8 _pad0[0x8];
 	static void *create();
