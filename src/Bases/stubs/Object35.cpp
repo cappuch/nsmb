@@ -7,3 +7,11 @@ void *Object35::create()
 
 // 0x02152460
 ActorProfile Object35_Profile = { Object35::create, 35, 48, NULL /* TODO: 0x0214e29c */ };
+
+s32 Object35::onDestroy() {
+	return 1;
+}
+
+void Object35::pendingDestroy() {
+
+}
