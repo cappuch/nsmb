@@ -10,3 +10,7 @@ void *StageScene::create()
 StageScene::StageScene()
 {
 }
+
+bool StageScene::preRender() {
+
+}
