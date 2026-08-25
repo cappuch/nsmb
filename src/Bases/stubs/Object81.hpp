@@ -7,6 +7,8 @@ extern "C" void* _ZTV7Vec3_32[];
 // MainProfileTable slot 81  |  ov035  |  profile @ 0x02143af0
 class Object81 : public StageEntity {
 public:
+	s32 onDestroy();
+	void _21();
 	static void *create();
 	inline Object81();
 	inline ~Object81() {};
