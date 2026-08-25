@@ -15,3 +15,7 @@ void Object147::pendingDestroy() {
 s32 Object147::onDestroy() {
 	return 1;
 }
+
+extern "C" void func_ov068_02177724() {
+
+}
