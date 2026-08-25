@@ -15,3 +15,7 @@ s32 Object185::onDestroy() {
 void Object185::pendingDestroy() {
 
 }
+
+extern "C" void func_ov121_0218d384() {
+
+}
