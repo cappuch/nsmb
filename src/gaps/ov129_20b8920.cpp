@@ -81,3 +81,16 @@ extern "C" void *func_ov129_020c1884(void *p) {
 extern "C" void *func_ov129_020c188c(void *p) {
 	return (char *)p + 0x20;
 }
+
+
+extern "C" void func_ov129_020bcb58(void *p) {
+	*(unsigned int *)((char *)p + 0x0) = 0xffffffffu;
+}
+
+extern "C" void func_ov129_020bf3a0(void *p) {
+	*(int *)((char *)p + 0x20) = 0;
+}
+
+extern "C" void func_ov129_020c3098(void *p) {
+	*(int *)((char *)p + 0x28) = 0;
+}

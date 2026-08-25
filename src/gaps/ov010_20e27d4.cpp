@@ -24,3 +24,7 @@ extern "C" void func_ov010_020e6eb0() {
 extern "C" int func_ov010_020e6eb4() {
 	return 1;
 }
+
+extern "C" void func_ov010_020e59ec(void *p) {
+	*(unsigned char *)((char *)p + 0xab) = 0;
+}

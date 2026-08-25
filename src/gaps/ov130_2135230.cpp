@@ -21,3 +21,38 @@ extern "C" int func_ov130_02136a18() {
 
 extern "C" void func_ov130_02136a58() {
 }
+
+extern "C" unsigned int func_ov130_02137420() {
+	return 0x21fc;
+}
+
+
+extern "C" unsigned int func_ov130_02137440() {
+	return 0x221c;
+}
+
+
+extern "C" unsigned int func_ov130_02137460() {
+	return 0x223c;
+}
+
+
+extern "C" unsigned int func_ov130_02137480() {
+	return 0x225c;
+}
+
+
+extern "C" unsigned int func_ov130_021374c8() {
+	return 0x22a4;
+}
+
+
+extern "C" unsigned int func_ov130_021374e8() {
+	return 0x22c4;
+}
+
+
+extern "C" unsigned int func_ov130_02137508() {
+	return 0x22e4;
+}
+
