@@ -104,61 +104,52 @@ s32 BootScene::onUpdate()
 {
 }
 
-i32 BootScene::func_ov001_020cc4b4() {
+i32 BootScene::func_ov001_020cc4b4()
+{
 	u32 local_r0;
 	u32 local_r1;
 	u32 local_r2;
 	u32 local_r4;
 	u32 local_r5;
 	u32 local_r6;
-	u32 local_r7;
-	u32 local_r8;
-	u32 local_r9;
+	s32 local_r7;
+	u16 local_r8;
+	s32 local_r9;
 	u32 local_r10;
-	u32 local_r11;
-	local_r9 = 0x0;
+	s32 local_r11;
+	local_r9 = 0;
 	local_r10 = (u32)this;
-	local_r7 = 0x0;
-	local_r11 = 0x0;
+	local_r7 = 0;
+	local_r11 = 0;
 	local_r5 = 0x1000;
 	local_r6 = 0x2000;
 	local_r4 = 0x3ff;
-	while (true) {
-		u32 tmp_call0;
-		local_r0 = (*rcast<u8*>((local_r10 + 0x7b)));
-		if ((local_r9 != local_r0)) {
+
+	do {
+		if (local_r9 != *rcast<u8 *>(local_r10 + 0x7b)) {
 			local_r0 = local_r5;
+		} else if (*rcast<u8 *>(local_r10 + 0x7c) == 0) {
+			local_r0 = local_r6;
 		} else {
-			bool tmp_cond0;
-			local_r0 = ((tmp_cond0 = ((*rcast<u8*>((local_r10 + 0x7c))) == 0x0)) ? local_r6 : (*rcast<u8*>((local_r10 + 0x7c))));
-			if (tmp_cond0) {
-			} else {
-				local_r0 = local_r5;
-			}
+			local_r0 = local_r5;
 		}
-		local_r0 = (local_r0 << 0x10);
-		local_r8 = (local_r0 >> 0x10);
-		(tmp_call0 = Nitro::func_02062244(local_r0));
-		local_r0 = (tmp_call0 + 0x4c0);
-		local_r1 = local_r11;
-		local_r2 = (local_r0 + (local_r7 << 0x1));
+		local_r0 <<= 0x10;
+		local_r8 = (u16)(local_r0 >> 0x10);
+		local_r0 = Nitro::func_02062244(local_r0) + 0x4c0;
+		local_r2 = local_r0 + (local_r7 << 1);
+		local_r11 = 0;
 		do {
-			u32 frozen_r1 = local_r1;
-			local_r0 = (local_r2 + (local_r1 << 0x1));
-			local_r1 = (local_r1 + 0x1);
-			(*rcast<u16*>((local_r2 + (frozen_r1 << 0x1)))) = (local_r8 + ((*rcast<u16*>((local_r2 + (frozen_r1 << 0x1)))) & local_r4));
-			(*rcast<u16*>((local_r0 + 0x40))) = (local_r8 + ((*rcast<u16*>((local_r0 + 0x40))) & local_r4));
-			(*rcast<u16*>((local_r0 + 0x80))) = (local_r8 + ((*rcast<u16*>((local_r0 + 0x80))) & local_r4));
-			(*rcast<u16*>((local_r0 + 0xc0))) = (local_r8 + ((*rcast<u16*>((local_r0 + 0xc0))) & local_r4));
-		} while ((local_r1 < 0x10));
-		local_r9 = (local_r9 + 0x1);
-		local_r7 = (local_r7 + 0x10);
-		if ((local_r9 < 0x2)) {
-		} else {
-			break;
-		}
-	}
-	return local_r0;
+			local_r0 = local_r2 + ((u32)local_r11 << 1);
+			++local_r11;
+			*rcast<u16 *>(local_r0) = local_r8 + (*rcast<u16 *>(local_r0) & local_r4);
+			*rcast<u16 *>(local_r0 + 0x40) = local_r8 + (*rcast<u16 *>(local_r0 + 0x40) & local_r4);
+			*rcast<u16 *>(local_r0 + 0x80) = local_r8 + (*rcast<u16 *>(local_r0 + 0x80) & local_r4);
+			*rcast<u16 *>(local_r0 + 0xc0) = local_r8 + (*rcast<u16 *>(local_r0 + 0xc0) & local_r4);
+		} while (local_r11 < 0x10);
+		++local_r9;
+		local_r7 += 0x10;
+	} while (local_r9 < 2);
+	return (i32)local_r0;
 }
 
 BootScene::~BootScene()
