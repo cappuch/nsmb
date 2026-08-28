@@ -31,8 +31,8 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - [x] Iterate: implement -> build -> objdiff -> verify -> commit
 - [x] QA verify and push clean commits to origin/qa
 - [x] Return to agent/decomp
-- [ ] Continue next target
-- [ ] Final report
+- [x] Continue next target (prospected Coin, MGScene_338, worldmap, ARM9)
+- [x] Final report
 
 ## Findings
 - report.json has per-function fuzzy_match_percent for 2138 functions (partial/matched); unmatched fns have no key.
@@ -41,6 +41,8 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - Fresh session baseline remained 88438 matched bytes / 1530 functions.
 - QA was fast-forwarded to origin/qa, then commits were cherry-picked, rebuilt, globally reported at 88438/1530, and pushed as fc0171a.
 - StageEntity::_18 was abandoned as a target after informed Ghidra/objdiff review; its experimental changes were restored.
+- Correct MGScene_338::onCreate target address is ov130 0x02134F6C (raw offset 0x1288C), not nearby 0x02122F60. A readable reconstruction reached 99.26% but remained relocation/symbol-form mismatched and was discarded.
+- Coin::func_ov010_020d9004 uses a signed-halfword angle table at 0x02121634 and _FixedSinCosTbl at 0x02080304; reconstruction was withheld after incompatible MWCC code generation.
 
 ## Intellect
 - StageEntity::onUpdate_8 was semantically close but differed due to source structure: squished branch calls `_35`, and grounded handling must be nested under the bounce-mask branch. Explicit velocity negation reproduces MWCC's instruction sequence.
@@ -55,7 +57,8 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - 824f8db: WmPlayerModel::render exact (+116 bytes, +1 function).
 - StageEntity::_18 experiment was discarded (not exact; source restored).
 - Fresh report after rebuild: matched_code 87970 -> 88438 (+468), matched_functions 1528 -> 1530 (+2); exact functions are onUpdate_8 and WmPlayerModel::render.
-- QA promotion: origin/qa now contains the verified StageEntity and WmPlayerModel changes; agent/decomp was pushed through 932f266.
+- QA promotion: origin/qa now contains the verified StageEntity and WmPlayerModel changes; agent/decomp was pushed through d232abd.
+- This pass produced no additional exact match; current agent/decomp remains at 88438/1530 and is pushed.
 
 
 ## Objectives
