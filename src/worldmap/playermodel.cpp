@@ -8,6 +8,9 @@ extern "C" bool func_ov011_0212db00(PlayerModel*, u8, u32);
 extern "C" u16 func_ov011_0212ccac(PlayerModel*);
 extern "C" u16 func_ov011_0212ccc4(PlayerModel*);
 extern "C" void func_ov011_0212ce50(PlayerModel*, void*, u32, u32, i32, u16);
+extern "C" void func_ov011_0212cd64(PlayerModel*, void*, u32, i32, u16);
+extern PlayerHeadAnimation *data_ov011_0212f714[];
+extern u32 data_ov011_0212e228[];
 
 enum {
 	pl_map_file_id = 1894 - 131
@@ -181,13 +184,13 @@ void WmPlayerModel::initHead(u32 animID) {
 
 	headAnimID = animID;
 
-	const PlayerHeadAnimation& headAnim = model.headAnimations[playerID][headAnimID];
+	const PlayerHeadAnimation& headAnim = data_ov011_0212f714[playerID][headAnimID];
 
-	void* animFile = FS::Cache::getFile(model.headPatternFileIDs[playerID]);
+	void* animFile = FS::Cache::getFile(data_ov011_0212e228[playerID]);
 	if (animFile != nullptr) {
 		void* animRes = Ns_3dGetAnimation(scast<Ns3dFileHeader*>(animFile), headAnim.animID);
 		if (animRes != nullptr) {
-			model.setHeadAnimation(animRes, headAnim.type, headAnim.speed, headAnim.startFrame);
+			func_ov011_0212cd64(&model, animRes, headAnim.type, headAnim.speed, headAnim.startFrame);
 		}
 	}
 
