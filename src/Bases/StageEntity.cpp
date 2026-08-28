@@ -215,7 +215,7 @@ void StageEntity::func_ov000_0209da00()
 	StageEntity::func_ov000_0209da0c();
 }
 
-u32 uRam020cad40;
+extern u32 data_ov000_020cad40;
 void func_ov000_020af30c(u32, u32, u32, u32, u32);
 void StageEntity::func_ov000_0209e5a8(u32 param_1, u32 param_2)
 {
@@ -225,7 +225,7 @@ void StageEntity::func_ov000_0209e5a8(u32 param_1, u32 param_2)
 	if (param_2 == ~0) {
 		param_2 = 3;
 	}
-	func_ov000_020af30c(uRam020cad40, (uVar1 << 4) >> 0x10, (u32)(((i32)param_1 >> 0xc) * -0x10000) >> 0x10, 0, 0);
+	func_ov000_020af30c(data_ov000_020cad40, (uVar1 << 4) >> 0x10, (u32)(((i32)param_1 >> 0xc) * -0x10000) >> 0x10, 0, 0);
 
 	Vec3_32 vec;
 
@@ -401,8 +401,8 @@ bool StageEntity::onUpdate_3()
 	} else {
 		this->rotation.x += 0xc00;
 	}
+	this->applyVelocity();
 	this->updateVerticalVelocity();
-	this->func_ov000_0209c85c();
 	this->_11();
 	this->destroyInactive(((u32)(this->_2c6 & 2) << 0xf) >> 0x10);
 	return true;
@@ -422,8 +422,44 @@ bool StageEntity::onUpdate_6()
 bool StageEntity::onUpdate_7()
 {
 }
+extern "C" void func_ov000_020aa990(Vec3_32 *, u32);
+
 bool StageEntity::onUpdate_8()
 {
+	this->updateVerticalVelocity();
+	this->func_ov000_0209c85c();
+	this->updateBottomSensors();
+	func_ov000_020aa990((Vec3_32 *)((u8 *)this + 0x1d0), *(u32 *)((u8 *)this + 0x24c));
+	this->updateSideSensors();
+	if (this->checkSquished()) {
+		this->func_ov000_0209ab90(1, 0, 0x18000, this->linked_player);
+		this->_35();
+		return true;
+	}
+	if ((*(u32 *)((u8 *)this + 0x24c) & 0x1f40) != 0) {
+		this->updateBounce(0x300, 0x800, 0x800);
+		if (this->velocity.y == 0) {
+			this->_340 = 0;
+			this->velocity.x = 0;
+			this->_13();
+			this->linked_player = ~0;
+		}
+	} else if ((*(u32 *)((u8 *)this + 0x24c) & 0xe000) != 0) {
+		this->velocity.y = -0xd00;
+	}
+	if ((*(u32 *)((u8 *)this + 0x24c) & (0x15 << this->direction)) != 0) {
+		i32 velocity = this->velocity.x;
+		i32 magnitude = velocity < 0 ? -velocity : velocity;
+		magnitude >>= 1;
+		// Reverse horizontal direction and halve speed (minimum 0x1000)
+		this->velocity.x = -velocity;
+		if (magnitude < 0x1000) magnitude = 0x1000;
+		if (this->velocity.x < 0) this->velocity.x = -magnitude;
+		else this->velocity.x = magnitude;
+	}
+	this->func_ov000_0209c820(-0x300);
+	this->_11();
+	return true;
 }
 bool StageEntity::onUpdate_9()
 {
@@ -775,5 +811,9 @@ bool StageEntity::func_ov000_0209ff98() {
 	}
 
 	return false;
+
+}
+
+void StageEntity::onStomped() {
 
 }
