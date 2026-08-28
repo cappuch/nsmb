@@ -213,6 +213,7 @@ public:
 	static u8 func_ov000_0209aad0(Vec3_32 *, u32, u32);
 	u32 random();
 	void func_ov000_0209c85c();
+	void func_ov000_0209ab90(u32, u32, u32, i8);
 	i32 tryAttachToPlayerHands(i32, i32, i32);
 	i32 attachToPlayerHands(i32, i32, i32);
 	void func_ov000_0209c820(u32);

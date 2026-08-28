@@ -433,17 +433,17 @@ bool StageEntity::onUpdate_8()
 	this->updateSideSensors();
 	if (this->checkSquished()) {
 		this->func_ov000_0209ab90(1, 0, 0x18000, this->linked_player);
-		this->_11();
+		this->_35();
 		return true;
 	}
 	if ((*(u32 *)((u8 *)this + 0x24c) & 0x1f40) != 0) {
 		this->updateBounce(0x300, 0x800, 0x800);
-	}
-	if (this->velocity.y == 0) {
-		*(u32 *)((u8 *)this + 0xd0) = 0;
-		*(u32 *)((u8 *)this + 0xd4) = 0;
-		this->_13();
-		this->linked_player = ~0;
+		if (this->velocity.y == 0) {
+			this->_340 = 0;
+			this->velocity.x = 0;
+			this->_13();
+			this->linked_player = ~0;
+		}
 	} else if ((*(u32 *)((u8 *)this + 0x24c) & 0xe000) != 0) {
 		this->velocity.y = -0xd00;
 	}
@@ -451,8 +451,11 @@ bool StageEntity::onUpdate_8()
 		i32 velocity = this->velocity.x;
 		i32 magnitude = velocity < 0 ? -velocity : velocity;
 		magnitude >>= 1;
+		// Reverse horizontal direction and halve speed (minimum 0x1000)
+		this->velocity.x = -velocity;
 		if (magnitude < 0x1000) magnitude = 0x1000;
-		this->velocity.x = velocity < 0 ? -magnitude : magnitude;
+		if (this->velocity.x < 0) this->velocity.x = -magnitude;
+		else this->velocity.x = magnitude;
 	}
 	this->func_ov000_0209c820(-0x300);
 	this->_11();
