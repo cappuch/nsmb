@@ -34,6 +34,7 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 ## Findings
 - report.json has per-function fuzzy_match_percent for 2138 functions (partial/matched); unmatched fns have no key.
 - Units: 832. Helper scripts already in .maiku/ (listfns, unitfuncs, sidediff, fndump, probe).
+- Subagents identified StageEntity::_18, Coin state handlers, and worldmap player model as the strongest concrete clusters; gap-only functions are generally lower-confidence.
 
 ## Intellect
 - StageEntity::onUpdate_8 was semantically close but differed due to source structure: squished branch calls `_35`, and grounded handling must be nested under the bounce-mask branch. Explicit velocity negation reproduces MWCC's instruction sequence.
@@ -43,13 +44,11 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 
 
 ## Changes
-- StageEntity.hpp: moved func_ov000_0209ab90 from StageActor to StageEntity.
-- StageEntity.cpp: corrected onUpdate_8 control flow, grounded/bounce behavior, and horizontal reversal.
-- StageEntity.hpp: moved func_ov000_0209ab90 from StageActor to StageEntity.
-- StageEntity.cpp: corrected onUpdate_8 control flow, grounded/bounce behavior, and horizontal reversal.
+- d86f2ad: StageEntity::onUpdate_8 exact (+352 bytes, +1 function).
+- cbe3d6e: corrected StageEntity helper ownership declaration.
+- 824f8db: WmPlayerModel::render exact (+116 bytes, +1 function).
 - StageEntity.cpp: recovered substantial _18 shell/collision behavior (currently 64.41%, not committed as exact).
-- playermodel.cpp: implemented WmPlayerModel::render, including shell flag and exact render forwarding.
-- Verified fresh report: matched_code 87970 -> 88438 (+468), matched_functions 1528 -> 1530 (+2); onUpdate_8 and WmPlayerModel::render are 100%.
+- Fresh report after rebuild: matched_code 87970 -> 88438 (+468), matched_functions 1528 -> 1530 (+2); exact functions are onUpdate_8 and WmPlayerModel::render.
 
 
 ## Objectives
