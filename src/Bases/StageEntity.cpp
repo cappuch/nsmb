@@ -662,10 +662,22 @@ u32 StageEntity::updateSideSensors()
 
 bool StageEntity::checkSquished()
 {
-	u32 _2bf = this->empty;
-	if (_2bf != 0) {
-		return true;
+	u8 flags = this->_2bf;
+	if (flags != 0) {
+		if ((u8)(flags & 1) != 0 && (*(u32 *)((u8 *)this + 0x24c) & 0x15) != 0) {
+			return true;
+		}
+		if ((u8)(flags & 2) != 0 && (*(u32 *)((u8 *)this + 0x24c) & 0x2a) != 0) {
+			return true;
+		}
+		if ((u8)(flags & 8) != 0 && (*(u32 *)((u8 *)this + 0x24c) & 0x1f40) != 0) {
+			return true;
+		}
+		if ((u8)(flags & 4) != 0 && (*(u32 *)((u8 *)this + 0x24c) & 0xe000) != 0) {
+			return true;
+		}
 	}
+	return false;
 }
 
 void StageEntity::onMegaGroundPound()
