@@ -101,8 +101,18 @@ bool WmPlayerModel::create(u8 playerID, u8 powerup, u32 animID) {
 
 }
 
-void WmPlayerModel::render(Mat4x3* mtx, Vec3_32* scale) {
+extern u16 data_ov000_020caa30;
+extern u16 data_ov000_020caa2c;
+extern "C" void func_ov011_0212d154(PlayerModel*, Mat4x3*, Vec3_32*, i8, BOOL, u32, u32, BOOL);
 
+void WmPlayerModel::render(Mat4x3* mtx, Vec3_32* scale) {
+	if (this->powerup == P_Shell) {
+		this->model.flags |= F_RenderShell;
+	} else {
+		this->model.flags &= ~F_RenderShell;
+	}
+	func_ov011_0212d154(&this->model, mtx, scale, this->config->paletteID, false,
+		data_ov000_020caa30, data_ov000_020caa2c, false);
 }
 
 void WmPlayerModel::update(u8 moveState) {

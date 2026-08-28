@@ -28,7 +28,7 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - [x] Produce ranked candidate list
 - [x] Attack StageEntity::onUpdate_8 (352B @93.89%) first
 - [x] Dispatch subagents for parallel prospecting
-- [ ] Iterate: implement -> build -> objdiff -> verify -> commit
+- [x] Iterate: implement -> build -> objdiff -> verify -> commit
 - [ ] Final report
 
 ## Findings
@@ -38,12 +38,18 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 ## Intellect
 - StageEntity::onUpdate_8 was semantically close but differed due to source structure: squished branch calls `_35`, and grounded handling must be nested under the bounce-mask branch. Explicit velocity negation reproduces MWCC's instruction sequence.
 - Calls to helpers only became relocatable after declaring them as StageEntity members; this improved the function from 99.83% to 100%.
+- StageEntity::_18 improved from 60.57% to 64.41% by recovering the PlayerBase carrying flag, Game::getPlayer, collision tile query, and edge offset; remaining mismatch is compiler/source-shape and not yet exact.
+- WmPlayerModel::render is a shell-state render wrapper that forwards matrix/scale, palette, and global render parameters to the ov011 PlayerModel routine.
 
 
 ## Changes
 - StageEntity.hpp: moved func_ov000_0209ab90 from StageActor to StageEntity.
 - StageEntity.cpp: corrected onUpdate_8 control flow, grounded/bounce behavior, and horizontal reversal.
-- Verified fresh build/report: matched_code 87970 -> 88322 (+352), matched_functions 1528 -> 1529 (+1); StageEntity::onUpdate_8 is 100%.
+- StageEntity.hpp: moved func_ov000_0209ab90 from StageActor to StageEntity.
+- StageEntity.cpp: corrected onUpdate_8 control flow, grounded/bounce behavior, and horizontal reversal.
+- StageEntity.cpp: recovered substantial _18 shell/collision behavior (currently 64.41%, not committed as exact).
+- playermodel.cpp: implemented WmPlayerModel::render, including shell flag and exact render forwarding.
+- Verified fresh report: matched_code 87970 -> 88438 (+468), matched_functions 1528 -> 1530 (+2); onUpdate_8 and WmPlayerModel::render are 100%.
 
 
 ## Objectives
