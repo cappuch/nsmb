@@ -1,6 +1,11 @@
 #include "playermodel.hpp"
 #include "../AAA.hpp"
 
+extern u16 data_ov000_020caa30;
+extern u16 data_ov000_020caa2c;
+extern "C" void func_ov011_0212d154(PlayerModel*, Mat4x3*, Vec3_32*, i8, BOOL, u32, u32, BOOL);
+extern "C" bool func_ov011_0212db00(PlayerModel*, u8, u32);
+
 enum {
 	pl_map_file_id = 1894 - 131
 };
@@ -65,7 +70,7 @@ WmPlayerModel::~WmPlayerModel() {}
 
 bool WmPlayerModel::create(u8 playerID, u8 powerup, u32 animID) {
 
-	if (!model.create(playerID, pl_map_file_id))
+	if (!func_ov011_0212db00(&model, playerID, pl_map_file_id))
 		return false;
 
 	this->playerID = playerID;
@@ -100,10 +105,6 @@ bool WmPlayerModel::create(u8 playerID, u8 powerup, u32 animID) {
 	return true;
 
 }
-
-extern u16 data_ov000_020caa30;
-extern u16 data_ov000_020caa2c;
-extern "C" void func_ov011_0212d154(PlayerModel*, Mat4x3*, Vec3_32*, i8, BOOL, u32, u32, BOOL);
 
 void WmPlayerModel::render(Mat4x3* mtx, Vec3_32* scale) {
 	if (this->powerup == P_Shell) {
