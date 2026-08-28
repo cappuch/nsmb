@@ -91,19 +91,23 @@ s32 StageEntity::onUpdate()
 	return this->onUpdate_0();
 }
 
+extern u32 data_02085a7c;
+
 bool StageEntity::_01()
 {
 	if (this->_3e9 != 0) {
 		return false;
 	}
-	if (this->_340 != 5) {
-		i32 a = this->viewOffset.x << 0xc;
-		i32 b = this->viewOffset.y << 0xc;
-		i32 c = this->renderSize.x;
-		i32 d = this->renderSize.y;
-		return func_0200ae9c(&this->position);
+	if (this->_340 == 5) {
+		return false;
 	}
-	return false;
+
+	i32 bounds[4];
+	bounds[0] = this->viewOffset.x << 0xc;
+	bounds[1] = this->viewOffset.y << 0xc;
+	bounds[2] = this->renderSize.x << 0xb;
+	bounds[3] = this->renderSize.y << 0xb;
+	return func_0200ae9c(&this->position, bounds, (i8)data_02085a7c);
 }
 
 void StageEntity::_12()

@@ -372,7 +372,7 @@ extern "C" {
 	void func_020050d8();
 	void func_020050c0();
 	void onRender_3();
-	bool(func_0200ae9c)(Vec3_32 *);
+	i32(func_0200ae9c)(Vec3_32 *, i32 *, i8);
 	bool(func_0201f000)(Vec3_32 *);
 	bool isMultiBootCart();
 	bool func_020109c8();
