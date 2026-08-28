@@ -5,6 +5,9 @@ extern u16 data_ov000_020caa30;
 extern u16 data_ov000_020caa2c;
 extern "C" void func_ov011_0212d154(PlayerModel*, Mat4x3*, Vec3_32*, i8, BOOL, u32, u32, BOOL);
 extern "C" bool func_ov011_0212db00(PlayerModel*, u8, u32);
+extern "C" u16 func_ov011_0212ccac(PlayerModel*);
+extern "C" u16 func_ov011_0212ccc4(PlayerModel*);
+extern "C" void func_ov011_0212ce50(PlayerModel*, void*, u32, u32, i32, u16);
 
 enum {
 	pl_map_file_id = 1894 - 131
@@ -133,12 +136,12 @@ void WmPlayerModel::init(u32 animID, BOOL resume) {
 
 	if (!resume) {
 		if (anim.speed < 0) {
-			startFrame = model.getAnimationFrameCount() - 1;
+			startFrame = func_ov011_0212ccac(&model) - 1;
 		} else {
 			startFrame = 0;
 		}
 	} else {
-		startFrame = model.getCurrentAnimationFrame();
+		startFrame = func_ov011_0212ccc4(&model);
 	}
 
 	switch (this->animID) {
@@ -163,7 +166,7 @@ void WmPlayerModel::init(u32 animID, BOOL resume) {
 	if (animFile != nullptr) {
 		void* animRes = Ns_3dGetAnimation(scast<Ns3dFileHeader*>(animFile), resIdx);
 		if (animRes != nullptr) {
-			model.setBodyAnimation(animRes, 0, anim.type, anim.speed, startFrame);
+			func_ov011_0212ce50(&model, animRes, 0, anim.type, anim.speed, startFrame);
 		}
 	}
 
