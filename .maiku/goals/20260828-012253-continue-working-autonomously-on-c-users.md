@@ -2,7 +2,7 @@
 
 ## Plan (draft)
 
-Baseline (fresh report): matched_code=87970, matched_functions=1528, fuzzy=4.32%.
+Baseline (fresh report): matched_code=88438, matched_functions=1530, fuzzy=4.33%.
 
 Strategy:
 1. Regenerate report (done) and establish baseline.
@@ -32,6 +32,7 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - [x] QA verify and push clean commits to origin/qa
 - [x] Return to agent/decomp
 - [x] Continue next target (prospected Coin, MGScene_338, worldmap, ARM9)
+- [x] Re-rank after informed blockers
 - [x] Final report
 
 ## Findings
@@ -43,6 +44,8 @@ Known blockers (avoid unless new evidence): WmController::moveEntities, tryNorma
 - StageEntity::_18 was abandoned as a target after informed Ghidra/objdiff review; its experimental changes were restored.
 - Correct MGScene_338::onCreate target address is ov130 0x02134F6C (raw offset 0x1288C), not nearby 0x02122F60. A readable reconstruction reached 99.26% but remained relocation/symbol-form mismatched and was discarded.
 - Coin::func_ov010_020d9004 uses a signed-halfword angle table at 0x02121634 and _FixedSinCosTbl at 0x02080304; reconstruction was withheld after incompatible MWCC code generation.
+- MGScene_338::onCreate target was conclusively mapped to ov130 0x02134F6C; readable source matched instruction bytes but remained at 99.26% due literal-pool and symbol-form relocations, so it was not committed.
+- Current development tree has no tracked source edits; only longstanding untracked tool artifacts remain.
 
 ## Intellect
 - StageEntity::onUpdate_8 was semantically close but differed due to source structure: squished branch calls `_35`, and grounded handling must be nested under the bounce-mask branch. Explicit velocity negation reproduces MWCC's instruction sequence.
